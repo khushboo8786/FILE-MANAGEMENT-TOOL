@@ -1,0 +1,95 @@
+#include <iostream>
+#include <fstream>
+#include <string>
+
+using namespace std;
+
+// Function to write to a file (overwrites existing content)
+void writeToFile(const string& filename) {
+    ofstream outFile(filename);
+    if (!outFile) {
+        cerr << "Error opening file for writing." << endl;
+        return;
+    }
+
+    cout << "Enter text to write to the file (end with a single line containing 'END'):\n";
+    string line;
+    while (getline(cin, line)) {
+        if (line == "END") break;
+        outFile << line << endl;
+    }
+
+    outFile.close();
+    cout << "Data written successfully.\n";
+}
+
+// Function to append data to a file
+void appendToFile(const string& filename) {
+    ofstream outFile(filename, ios::app);
+    if (!outFile) {
+        cerr << "Error opening file for appending." << endl;
+        return;
+    }
+
+    cout << "Enter text to append to the file (end with a single line containing 'END'):\n";
+    string line;
+    while (getline(cin, line)) {
+        if (line == "END") break;
+        outFile << line << endl;
+    }
+
+    outFile.close();
+    cout << "Data appended successfully.\n";
+}
+
+// Function to read data from a file
+void readFromFile(const string& filename) {
+    ifstream inFile(filename);
+    if (!inFile) {
+        cerr << "Error opening file for reading." << endl;
+        return;
+    }
+
+    cout << "Contents of " << filename << ":\n";
+    string line;
+    while (getline(inFile, line)) {
+        cout << line << endl;
+    }
+
+    inFile.close();
+}
+
+int main() {
+    string filename = "data.txt";
+    int choice;
+
+    do {
+        cout << "\n=== FILE MANAGEMENT TOOL ===\n";
+        cout << "1. Write to File (Overwrite)\n";
+        cout << "2. Append to File\n";
+        cout << "3. Read File\n";
+        cout << "4. Exit\n";
+        cout << "Enter your choice (1-4): ";
+        cin >> choice;
+        cin.ignore(); // To ignore newline after the integer input
+
+        switch (choice) {
+            case 1:
+                writeToFile(filename);
+                break;
+            case 2:
+                appendToFile(filename);
+                break;
+            case 3:
+                readFromFile(filename);
+                break;
+            case 4:
+                cout << "Exiting the application.\n";
+                break;
+            default:
+                cout << "Invalid choice. Try again.\n";
+        }
+    } while (choice != 4);
+
+    return 0;
+}
