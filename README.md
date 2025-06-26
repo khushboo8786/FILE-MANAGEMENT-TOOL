@@ -1,10 +1,17 @@
 # FILE-MANAGEMENT-TOOL
+
 *COMPANY*:CODTECH IT SOLUTIONS
+
 *NAME*:KHUSHBOO KUMARI
+
 *INTERN ID*:CT04DN1859
+
 *DOMAIN*:C++
+
 *DURATION*:4 WEEKS
+
 *MENTOR*:NEELA SANTHOSH KUMAR
+
 **> The File Management Tool developed in C++ is a simple yet effective application that demonstrates the fundamental concepts of file handling using standard C++ libraries. This project is a part of the internship deliverables for CodTech and focuses on showcasing how to perform essential file operations like reading, writing, and appending text data in a C++ environment.
 
 -> File handling is a crucial part of software development. It allows programs to store, retrieve, and manipulate data across sessions. In C++, file operations are handled through a set of standard library classes such as ifstream (input file stream), ofstream (output file stream), and fstream (file stream for both input and output). This tool combines all these classes to provide an interactive menu-based program that allows users to manage a file called data.txt.
@@ -24,3 +31,6 @@
 -> This tool is designed to work on any platform that supports a C++ compiler, such as g++, and is ideal for running in Visual Studio Code or any other modern development environment. It serves as a basic yet powerful introduction to file management in C++ and can be expanded further to include features like file deletion, search, or line-wise editing.
 
 -> Overall, this File Management Tool is a strong demonstration of practical file handling skills in C++. It meets the expectations of the internship task by providing a functional and interactive application that showcases core file I/O concepts in a real-world scenario. It also helps in strengthening the understanding of how persistent data storage works in programming
+
+*OUTPUT*:![image](https://github.com/user-attachments/assets/eb4b22e4-6ea5-4ed4-a2b1-2f1f36bb0ac1)
+
